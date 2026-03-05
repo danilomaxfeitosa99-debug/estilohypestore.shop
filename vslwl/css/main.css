@@ -1,0 +1,309 @@
+:root {
+  --primary-color: #1B4332; /* Verde escuro profundo */
+  --secondary-color: #2D6A4F; /* Verde médio */
+  --accent-color: #F2B134; /* Dourado para destaque */
+  --dark-bg: #1a1a1a; /* Grafite escuro */
+  --text-color: #333;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  background-color: #f8f9fa;
+}
+
+/* Topo e VSL Area */
+.topo-0 {
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.topo-1 {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.topo-marquee {
+  background-color: #000;
+  color: #FFE500;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.topo-01 {
+  background-color: var(--primary-color);
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+
+.titulo-topo-01 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.titulo-topo-01 span {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 15px;
+}
+
+/* Seção de Produtos */
+.products {
+  padding: 50px 0;
+  background-color: var(--primary-color);
+}
+
+.item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 2px solid #e0e0e0;
+  height: 100%;
+}
+
+.promo .wrapper {
+  border-color: var(--secondary-color);
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.item-header {
+  background: #e0e0e0;
+  padding: 12px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo .item-header {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.item-img {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.supply {
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.supply b {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.item-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item-info {
+  padding: 0 25px 25px;
+  text-align: center;
+}
+
+.price {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-unit {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-unit span.currency {
+  font-size: 2rem;
+  margin-right: 5px;
+  align-self: center;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.savings div {
+  background: #f1f1f1;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.savings div::before {
+  content: "\F272";
+  font-family: "bootstrap-icons";
+  color: var(--secondary-color);
+}
+
+.promo .savings div {
+  background: #e8f5e9;
+  color: var(--primary-color);
+}
+
+.item-buy {
+  padding: 0 25px 25px;
+}
+
+.button {
+  background: #28a745;
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-align: center;
+  box-shadow: 0 6px 0 #1e7e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button::before {
+  content: "\F23E";
+  font-family: "bootstrap-icons";
+}
+
+.promo .button {
+  background: var(--accent-color);
+  color: #000;
+  box-shadow: 0 6px 0 #c79100;
+}
+
+.card-flags {
+  max-width: 180px;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.item-totals {
+  background: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.totals {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.totals s {
+  color: #999;
+  margin-right: 10px;
+}
+
+.totals b {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.shipping {
+  color: #28a745;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Garantia */
+.topo-4 {
+  background: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.topo-4 h2 {
+  color: var(--primary-color);
+  font-weight: 900;
+  margin: 25px 0;
+}
+
+.topo-4 p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+footer .links {
+  margin-top: 20px;
+}
+
+footer .links a {
+  color: rgba(255,255,255,0.7);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .links a:hover {
+  color: white;
+}
+
+.esconder {
+  display: none;
+}
